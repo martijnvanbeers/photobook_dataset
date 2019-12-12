@@ -15,8 +15,8 @@ import sys
 from os.path import dirname, abspath
 sys.path.insert(0, dirname(dirname(abspath(__file__))))
 
-from utils.SegmentDataset import SegmentDataset
-from utils.Vocab import Vocab
+from photobook.segment import SegmentDataset
+from photobook.vocab import Vocab
 
 import datetime
 

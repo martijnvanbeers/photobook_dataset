@@ -9,8 +9,8 @@ from models.model_nohistory import DiscriminatoryModelBlind
 
 import os
 
-from utils.SegmentDataset import SegmentDataset
-from utils.Vocab import Vocab
+from photobook.segment import SegmentDataset
+from photobook.vocab import Vocab
 
 def get_f1(prec, recall, beta):
     return (1 + np.power(beta,2)) *((prec*recall)/(np.power(beta,2)*prec+recall))

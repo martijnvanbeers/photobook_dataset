@@ -18,10 +18,10 @@ import matplotlib.pyplot as plt
 from collections import defaultdict
 import os
 
-from utils.SegmentDataset import SegmentDataset
-from utils.HistoryDataset import HistoryDataset
+from photobook.segment import SegmentDataset
+from photobook.history import HistoryDataset
 
-from utils.Vocab import Vocab
+from photobook.vocab import Vocab
 
 def get_f1(prec, recall, beta):
 
