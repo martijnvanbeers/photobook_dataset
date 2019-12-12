@@ -7,15 +7,18 @@ Project developed with
 * NLTK
 * NumPy 1.16
 
-## Utils
+## photobook package classes
 
-**Vocab.py** is used to load the vocabulary, which also includes \<pad\> and \<unk\> tokens. It stores tokens with a frequency lower than the minimum occurrence limit as \<unk\>.
+**photobook.vocab.Vocab** is used to load the vocabulary, which also includes \<pad\> and \<unk\> tokens. It stores tokens with a frequency lower than the minimum occurrence limit as \<unk\>.
   
-**SegmentDataset.py** provides the models with segment information as training/test/validation data.
+**photobook.segment.SegmentDataset** provides the models with segment information as training/test/validation data.
 For each segment, it retrieves the tokenized segment text and its length, the image set for the segment and the target image/images out of this set. This class uses the segment file and the image feature file. Pads the segments and image sets, when necessary in batching.
 
-**HistoryDataset.py** provides the models with segment information and chain histories.
-For each segment, it retrieves the tokenized segment text and its length, the image set for the segment and the target image/images out of this set. In addition to the functionalities of SegmentDataset, this class also supplies the concatenated previous reference segments for each image in the image set up to that point in the game. This class uses the segment file, chain file and the image feature file. Pads the dialogue segments and image sets, when necessary in batching.
+**photobook.history.HistoryDataset** provides the models with segment information and chain histories.
+For each segment, it retrieves the tokenized segment text and its length, the image set for the segment and the target image/images out of this set. In addition to the functionalities of `SegmentDataset`, this class also supplies the concatenated previous reference segments for each image in the image set up to that point in the game. This class uses the segment file, chain file and the image feature file. Pads the dialogue segments and image sets, when necessary in batching.
+
+
+## Utils
 
 **segment_ranks_ids.py**
 Script to get all the ranks a segments is positioned in different chains (hence, there could be multiples of the same position).
