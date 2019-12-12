@@ -8,8 +8,8 @@ import sys
 from os.path import dirname, abspath
 sys.path.insert(0, dirname(dirname(abspath(__file__))))
 
-from utils.Vocab import Vocab
-from utils.SegmentBuilder import SegmentBuilder
+from photobook.vocab import Vocab
+from photobook.segment import SegmentBuilder
 
 
 def create_segment_datasets(dialogue_segments, vocab, chain_id=0, method="word2index", tokenization="word_tokenize", speaker_lables=True, lowercase=True, splitting=True):

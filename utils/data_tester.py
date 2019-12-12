@@ -6,9 +6,9 @@ from collections import Counter
 from os.path import dirname, abspath
 sys.path.insert(0, dirname(dirname(abspath(__file__))))
 
-from utils.SegmentDataset import SegmentDataset
-from utils.ChainDataset import ChainDataset
-from utils.Vocab import Vocab
+from photobook.segment import SegmentDataset
+from photobook.chain import ChainDataset
+from photobook.vocab import Vocab
 
 
 # Tests the SegmentDataset and ChainDataset classes

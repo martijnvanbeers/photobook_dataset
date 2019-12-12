@@ -1,6 +1,6 @@
 import json
 from collections import defaultdict
-from Vocab import Vocab
+from photobook.vocab import Vocab
 
 with open('../data/test_segments.json', 'r') as file:
     test_sg = json.load(file)
